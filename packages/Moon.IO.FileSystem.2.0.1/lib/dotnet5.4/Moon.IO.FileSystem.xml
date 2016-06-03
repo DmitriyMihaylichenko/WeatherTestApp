@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Moon.IO.FileSystem</name>
+    </assembly>
+    <members>
+        <member name="T:Moon.IO.DirectoryInfoExtensions">
+            <summary>
+            <see cref="T:System.IO.DirectoryInfo" /> extension methods.
+            </summary>
+        </member>
+        <member name="M:Moon.IO.DirectoryInfoExtensions.CopyTo(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Copies an existing directory to a new destination, disallowing the overwriting of
+            existing files.
+            </summary>
+            <param name="source">The directory to be copied.</param>
+            <param name="destDirName">
+            The name and path to which to copy this directory. The destination cannot be another
+            disk volume.
+            </param>
+        </member>
+        <member name="M:Moon.IO.DirectoryInfoExtensions.CopyTo(System.IO.DirectoryInfo,System.String,System.Boolean)">
+            <summary>
+            Copies an existing directory to a new destination, allowing the overwriting of existing files.
+            </summary>
+            <param name="source">The directory to be copied.</param>
+            <param name="destDirName">
+            The name and path to which to copy this directory. The destination cannot be another
+            disk volume.
+            </param>
+            <param name="overwriteFiles">
+            <c>true</c> to allow an existing file to be overwritten; otherwise, <c>false</c>.
+            </param>
+        </member>
+        <member name="M:Moon.IO.DirectoryInfoExtensions.DeleteIfExists(System.IO.DirectoryInfo,System.Boolean)">
+            <summary>
+            Deletes the folder if it exists.
+            </summary>
+            <param name="directory">The <see cref="T:System.IO.DirectoryInfo" /> instance.</param>
+            <param name="recursive">
+            true to delete this directory, its subdirectories, and all files; otherwise, false.
+            </param>
+        </member>
+        <member name="M:Moon.IO.DirectoryInfoExtensions.Subdirectory(System.IO.DirectoryInfo,System.String)">
+            <summary>
+            Returns a subdirectory on the specified path.
+            </summary>
+            <param name="directory">The <see cref="T:System.IO.DirectoryInfo" /> instance.</param>
+            <param name="path">The subdirectory path.</param>
+        </member>
+        <member name="T:Moon.IO.FileInfoExtensions">
+            <summary>
+            <see cref="T:System.IO.FileInfo" /> extension methods.
+            </summary>
+        </member>
+        <member name="M:Moon.IO.FileInfoExtensions.Create(System.IO.FileInfo,System.Boolean)">
+            <summary>
+            Creates a file and optionally a directory.
+            </summary>
+            <param name="file">The file.</param>
+            <param name="createDirectory">Indicates whether to create a directory as well.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WeatherTestApp.MainScreen"
+			 Title="All">
+	<ContentPage.Padding>
+    	0, 0, 0, 0
+  	</ContentPage.Padding>
+  	<!--<ActivityIndicator x:Name="actIndicator" IsRunning="true" Color="Red"/>-->
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical">
+			<SearchBar x:Name="searchBar"
+			 	Placeholder="Search">				
+			</SearchBar>
+
+			<ListView x:Name="itemListView"
+	          IsGroupingEnabled="true" 
+	          ItemTapped="OnItemTapped"
+	  		  GroupDisplayBinding="{Binding LongTitle}"
+	  		  GroupShortNameBinding="{Binding Title}"
+	  		  BackgroundColor="Purple">
+			  <ListView.ItemTemplate>
+			    <DataTemplate> 
+			      <TextCell Text="{Binding Name}" Detail="{Binding Description}" TextColor="White"> 
+			      </TextCell> 
+			    </DataTemplate>
+			  </ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

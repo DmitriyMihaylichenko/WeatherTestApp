@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="WeatherTestApp.DetailScreen"
+			 xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+	<ContentPage.Content>
+	<ScrollView>
+		<StackLayout Orientation="Vertical"
+					 BackgroundColor="Purple"
+					 Padding="10,0"
+					 VerticalOptions="FillAndExpand"
+					 x:Name="mainStack">				
+			<Label x:Name="cityCaption"
+			   VerticalOptions="Start"
+	           HorizontalTextAlignment="Center"
+	           IsVisible="true"
+	           FontSize="Large"
+	           FontAttributes="Bold"
+	           TextColor="White"
+	           Margin="0,10,0,0"
+			/>
+
+			<!--<maps:Map HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+	            x:Name="myMap"
+	            IsShowingUser="true"
+	            MapType="Hybrid"
+	        />-->
+
+			<StackLayout Orientation="Horizontal">
+				<Image WidthRequest="100" HeightRequest="100"
+						x:Name="weatherImage"
+						BackgroundColor="White">
+				</Image>
+
+				<StackLayout Orientation="Vertical">
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Now:"
+						   VerticalOptions="Start"
+				           HorizontalTextAlignment="Start"
+				           IsVisible="true"
+				           FontSize="Small"
+				           TextColor="White"
+				           Margin="0,10,0,0"
+						/>
+
+						<Label x:Name="mainLabel"
+							   VerticalOptions="Start"
+					           HorizontalTextAlignment="Center"
+					           IsVisible="true"
+					           FontSize="Small"
+					           TextColor="White"
+					           Margin="0,10,0,0"
+						/>
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Temp:"
+						   VerticalOptions="Start"
+				           HorizontalTextAlignment="Start"
+				           IsVisible="true"
+				           FontSize="Small"
+				           TextColor="White"
+				           Margin="0,10,0,0"
+						/>
+
+						<Label x:Name="tempLabel"
+							   VerticalOptions="Start"
+					           HorizontalTextAlignment="Center"
+					           IsVisible="true"
+					           FontSize="Small"
+					           TextColor="White"
+					           Margin="0,10,0,0"
+						/>
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal">
+						<Label Text="On:"
+							   VerticalOptions="Start"
+					           HorizontalTextAlignment="Start"
+					           IsVisible="true"
+					           FontSize="Small"
+					           TextColor="White"
+					           Margin="0,10,0,0"
+						/>
+
+						<Label x:Name="dateLabel"
+							   VerticalOptions="Start"
+					           HorizontalTextAlignment="Center"
+					           IsVisible="true"
+					           FontSize="Small"
+					           TextColor="White"
+					           Margin="0,10,0,0"
+						/>
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Wind speed:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="windSpeedLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Wind direction:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="windDegLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Cloudiness:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="cloudinessLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Pressure:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="pressureLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Humidity:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="humidityLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Sunrise:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="sunriseLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Sunset:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="sunsetLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Coordinates:"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Start"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+
+				<Label x:Name="geoCoordsLabel"
+					   VerticalOptions="Start"
+			           HorizontalTextAlignment="Center"
+			           IsVisible="true"
+			           FontSize="Small"
+			           TextColor="White"
+			           Margin="0,10,0,0"
+				/>
+			</StackLayout>
+
+			<Button x:Name="addToFavor"
+					Text=""
+					TextColor="White"
+					BackgroundColor="Blue"
+					BorderRadius="20"
+					Clicked="OnAddToFavourClick">
+			</Button>
+		</StackLayout>
+	</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
