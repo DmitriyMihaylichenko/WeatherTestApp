@@ -15,32 +15,52 @@ namespace WeatherTestApp
 		{
 			InitializeComponent ();
 
+			showItemsList (false);
+			showLoadingInd (true);
+
 			CollectionManager.CitiesCollectionReady += () => {
-				itemListView.ItemsSource = CollectionManager.getCitiesReadyCollection (CollectionManager.citiesCollection, Config.groupingProp);
+				Device.BeginInvokeOnMainThread (() => {
+					itemListView.ItemsSource = CollectionManager.getCitiesReadyCollection (CollectionManager.citiesCollection, Config.groupingProp);
+				
+					itemListView.FadeTo(1, 1000, Easing.Linear);
+
+					showLoadingInd(false);
+				});
 			};
 
 			CollectionManager.loadCitiesFromFileToCollect (Config.cityListFile, CollectionManager.citiesCollection);
 
 			searchBar.TextChanged += (sender, e) => {
-				//actIndicator.IsRunning = true;
-
 				itemListView.FilterLocations (CollectionManager.citiesCollection, Config.groupingProp, searchBar.Text);
-
-				//actIndicator.IsRunning = false;
 			};
 				
 			searchBar.SearchButtonPressed += (sender, e) => {
-				//actIndicator.IsRunning = true;
-
 				itemListView.FilterLocations (CollectionManager.citiesCollection, Config.groupingProp, searchBar.Text);
-
-				//actIndicator.IsRunning = false;
 			};
+		}
+
+		// Show|Hide Items List View
+		public void showItemsList(bool isShowing) {
+			if (isShowing) {
+				itemListView.Opacity = 1;
+			} else {
+				itemListView.Opacity = 0;
+			}
+		}
+
+		// Show|Hide loading indicator
+		public void showLoadingInd(bool isLoading) {
+			if (isLoading) {
+				actIndicator.IsRunning = true;
+			} else {
+				actIndicator.IsRunning = false;
+				actIndicator.IsVisible = false;
+			}
 		}
 
 		// Clear search bar
 		public void clearSearch() {
-			searchBar.Text = string.Empty;
+			
 		}
 
 		void OnItemTapped (object sender, ItemTappedEventArgs ea) {

@@ -8,13 +8,16 @@
     	0, 0, 0, 0
   	</ContentPage.Padding>
 
-  	<!--<ActivityIndicator x:Name="actIndicator" IsRunning="true" Color="Red"/>-->
-
 	<ContentPage.Content>
 		<StackLayout Orientation="Vertical">
 			<SearchBar x:Name="searchBar"
 			 	Placeholder="Search">				
 			</SearchBar>
+
+			<ActivityIndicator Color="Red"
+  						VerticalOptions="FillAndExpand" 
+  						HorizontalOptions="FillAndExpand" 
+  						x:Name="actIndicator"/>
 
 			<ListView x:Name="itemListView"
 	          IsGroupingEnabled="true" 

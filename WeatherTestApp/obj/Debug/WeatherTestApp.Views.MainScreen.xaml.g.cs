@@ -20,12 +20,16 @@ namespace WeatherTestApp {
         private global::Xamarin.Forms.SearchBar searchBar;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ActivityIndicator actIndicator;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView itemListView;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainScreen));
             searchBar = this.FindByName <global::Xamarin.Forms.SearchBar>("searchBar");
+            actIndicator = this.FindByName <global::Xamarin.Forms.ActivityIndicator>("actIndicator");
             itemListView = this.FindByName <global::Xamarin.Forms.ListView>("itemListView");
         }
     }

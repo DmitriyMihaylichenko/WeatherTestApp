@@ -4,6 +4,8 @@ using System.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection;
+using System.Threading.Tasks;
+using System.Net;
 using System.Text;
 using System.Linq;
 
@@ -33,27 +35,29 @@ namespace WeatherTestApp
 		}
 
 		// Load cities from file
-		public static void loadCitiesFromFileToCollect(string fileName, List<CityValue> collect) {
-			var list = new List<string> ();
+		public static async void loadCitiesFromFileToCollect(string fileName, List<CityValue> collect) {
+			Task.Run (() => {
+				var list = new List<string> ();
 
-			var assembly = typeof(CollectionManager).GetTypeInfo().Assembly;
+				var assembly = typeof(CollectionManager).GetTypeInfo().Assembly;
 
-			//foreach (var res in assembly.GetManifestResourceNames())
-			//	System.Diagnostics.Debug.WriteLine("found resource: " + res);
+				//foreach (var res in assembly.GetManifestResourceNames())
+				//	System.Diagnostics.Debug.WriteLine("found resource: " + res);
 
-			Stream stream = assembly.GetManifestResourceStream($"WeatherTestApp.Resources.{fileName}");
+				Stream stream = assembly.GetManifestResourceStream($"WeatherTestApp.Resources.{fileName}");
 
-			using (var streamReader = new StreamReader (stream, Encoding.UTF8)) {				
-				string line = string.Empty;
+				using (var streamReader = new StreamReader (stream, Encoding.UTF8)) {				
+					string line = string.Empty;
 
-				while ((line = streamReader.ReadLine ()) != null) {
-					list.Add (line);
+					while ((line = streamReader.ReadLine ()) != null) {
+						list.Add (line);
+					}
 				}
-			}
 
-			parseDataFromJSONToCollect (list, collect);
+				parseDataFromJSONToCollect (list, collect);
 
-			CitiesCollectionReady?.Invoke ();
+				CitiesCollectionReady?.Invoke ();
+			});
 		}
 
 		// Load data from file in JSON format and parse to collection
