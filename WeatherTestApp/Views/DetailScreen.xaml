@@ -10,7 +10,7 @@
 					 BackgroundColor="Purple"
 					 Padding="10,0"
 					 VerticalOptions="FillAndExpand"
-					 x:Name="mainStack">				
+					 x:Name="mainStack">
 			<Label x:Name="cityCaption"
 			   VerticalOptions="Start"
 	           HorizontalTextAlignment="Center"
@@ -30,7 +30,7 @@
 			<StackLayout Orientation="Horizontal">
 				<Image WidthRequest="100" HeightRequest="100"
 						x:Name="weatherImage"
-						BackgroundColor="White">
+						BackgroundColor="Transparent">
 				</Image>
 
 				<StackLayout Orientation="Vertical">

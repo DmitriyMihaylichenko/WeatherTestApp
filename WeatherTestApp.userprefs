@@ -1,11 +1,6 @@
 ﻿<Properties StartupItem="iOS/WeatherTestApp.iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.9.2" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherTestApp/Views/DetailScreen.xaml">
-    <Files>
-      <File FileName="WeatherTestApp/Models/ListItemCollection.cs" Line="11" Column="20" />
-      <File FileName="WeatherTestApp/Views/DetailScreen.xaml" Line="248" Column="5" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

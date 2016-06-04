@@ -16,3 +16,4 @@
 /Users/mon/Documents/Xamarin Projects/WeatherTestApp/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
 /Users/mon/Documents/Xamarin Projects/WeatherTestApp/iOS/bin/iPhoneSimulator/Debug/WeatherTestApp.dll
 /Users/mon/Documents/Xamarin Projects/WeatherTestApp/iOS/bin/iPhoneSimulator/Debug/WeatherTestApp.dll.mdb
+/Users/mon/Documents/Xamarin Projects/WeatherTestApp/iOS/obj/iPhoneSimulator/Debug/optimized/launch.png

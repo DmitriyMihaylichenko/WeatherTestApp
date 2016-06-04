@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
-
-using CrossPlatformLibrary.Maps;
+using Xamarin.Forms.Maps;
 
 namespace WeatherTestApp
 {
