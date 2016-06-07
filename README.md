@@ -2,7 +2,7 @@
 
 # Unresolved crash bug:
 
-I was trying to add Xamarin.Forms.Maps plugin, but i have crashed app when only add code below in my page:
+I have been trying to add Xamarin.Forms.Maps plugin, but I have crashed app when only add code below in my page:
 
 maps:Map HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
 x:Name="myMap"
